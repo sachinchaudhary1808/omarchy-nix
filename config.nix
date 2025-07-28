@@ -27,7 +27,8 @@ lib: {
       type = lib.types.submodule {
         options = {
           wallpaper_path = lib.mkOption {
-            type = lib.types.path;
+            type = lib.types.nullOr lib.types.path;
+            default = null;
             description = "Path to the wallpaper image to extract colors from";
           };
         };
